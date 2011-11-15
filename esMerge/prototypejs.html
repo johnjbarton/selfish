@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript" src="prototype/prototype.js"></script>
+</head>
+<h1>PrototypeJS</h1>
+<p>Famous first generation JS library.</p>
+
+<a href="http://www.prototypejs.org/download">PrototypeJS download</a>
+<dl>
+<dt>
+<a href="http://api.prototypejs.org/language/Object/clone/">Object.clone</a>
+</dt>
+<dd>"Creates and returns a shallow duplicate of the passed object by copying all of the original's key/value pairs onto an empty object.
+
+Do note that this is a shallow copy, not a deep copy. Nested objects will retain their references."</dd>
+<dt><a href="http://api.prototypejs.org/language/Object/extend/">Object.extend</a></dt>
+<dd>"Copies all properties from the source to the destination object. Used by Prototype to simulate inheritance (rather statically) by copying to prototypes."
+<p>Shallow Copy Flatten</p>
+<pre>
+  function extend(destination, source) {
+    for (var property in source)
+      destination[property] = source[property];
+    return destination;
+  }
+</pre>
+</dd>
+<dt><a href="http://api.prototypejs.org/language/Class/create/">Class.create</a></dt>
+<dd>"Class.create creates a class and returns a constructor function for instances of the class. 
+Calling the constructor function (typically as part of a new statement) will invoke the class's initialize method."</dd>
+</dl>
+</html>
